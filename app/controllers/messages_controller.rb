@@ -5,7 +5,8 @@ class MessagesController < ApplicationController
   end
 
   def show
-      @message = Message.find(params[:id])
+      binding.pry
+      @message = Message.find_by(params[:uuid])
   end
 
   def new
@@ -24,7 +25,7 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:body)
+    params.require(:message).permit(:body,:link)
   end
 
 end

@@ -1,5 +1,5 @@
 <h1>Messages</h1>
 <br />
-<% @message.each do|message|%>
-    <h2><%= link_to message.body, message_path(message) %></h2>
+<% @message.each do|mess|%>
+    <h2><%= link_to mess.body, message_path(mess) %></h2>
 <% end %>
